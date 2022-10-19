@@ -3,5 +3,5 @@ class Gym < ApplicationRecord
   has_many :clients, through: :memberships
   validates :name, presence: true
   validates :address, presence: true
-  validates :client, uniqueness: { scope: :gym_id }
+  # validates :client, uniqueness: { scope: :gym_id }
 end

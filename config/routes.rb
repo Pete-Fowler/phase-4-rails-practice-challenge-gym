@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :memberships, only: %i[create show destroy]
-
+  resources :memberships, only: [:create]
+  resources :gyms, only: %i[show destroy]
   resources :client, only: [:show]
 end
