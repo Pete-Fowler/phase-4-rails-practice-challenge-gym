@@ -1,7 +1,6 @@
 class Gym < ApplicationRecord
-  has_many :memberships 
+  has_many :memberships, dependent: :destroy
   has_many :clients, through: :memberships
   validates :name, presence: true
   validates :address, presence: true
-  # validates :client, uniqueness: { scope: :gym_id }
 end
